@@ -1,28 +1,26 @@
 package com.thanhdat.crud.example.entity;
 
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Data
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
+@Data
 @Entity
-@Table(name = "PRODUCT_TBL")
-public class Product {
+@Table(name = "CATALOG_TBL")
+public class Catalog {
     @Id
     @GeneratedValue
-    private int id;
-    private int catalog_id;
+    private  int id;
     private String name;
-    private int quantity;
-    private double price;
-    private double discount;
-    private int view;
-
+    private int parent_id;
 }
